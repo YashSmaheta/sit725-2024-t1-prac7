@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIT725-Task3.2</title>
+  <meta name="description" content="basic template for SIT 725 Prac 3">
+  <meta name="author" content="SitePoint">
+  <meta property="og:title" content="SIT 725 Task3.2">
+  <meta property="og:type" content="website">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Custom Style Sheet-->
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <style>
+    .navbar-size {
+      width: 95%;
+      margin: 0 auto;
+      
+    }
+    .nav{
+      background-color:rgb(121, 165, 8);
+    }
+
+    .user-image-size {
+      height: 64px;
+    }
+    .main-body {
+      background-color: #59aaf1; /* Light gray */
+      padding: 20px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="navbar nav-wrapper navbar-size">
+      <a href="#" class="brand-logo"><img class="user-image-size" src="images/download.png" alt="Logo"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a target="_blank" href="https://www.linkedin.com/in/yash-maheta-45a21719b/">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="main-body">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <h1 id="heading">Welcome to SIT 725 Week 3</h1>
+          <p class="flow-text">This is a demo application that shows some of the DevOps Tools</p>
+        </div>
+        <div class="col s12 center-align">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="images/devops.jpeg" alt="devops">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">DevOps</span>
+              
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">DevOps<i class="material-icons right">close</i></span>
+              <p class="card-text">Hello There! I'm a popular tools and cloud platform used in DevOps </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col s12 center-align">
+          <img class="materialboxed materialboxed-image" src="images/devops.jpeg" alt="Live Demo" style="margin: 0 auto;">
+        </div> -->
+      
+        <div class="col s12 center-align">
+          <a class="waves-effect waves-light btn modal-trigger" href="#modalform">Launch demo modal</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4 center-align">
+          <div class="card small">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="images/ansible.jpeg" alt="ansible">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Ansible</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Ansible<i class="material-icons right">close</i></span>
+              <p class="card-text">Hello There! I'm a configuration management tool </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s4 center-align">
+          <div class="card small">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="images/aws.png" alt="aws">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">AWS</span>
+              
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">AWS<i class="material-icons right">close</i></span>
+              <p class="card-text">Hello There! I'm a popular cloud platform </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s4 center-align">
+          <div class="card small">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="images/terraform.png" alt="terraform">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Terraform</span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Terraform<i class="material-icons right">close</i></span>
+              <p class="card-text">Hello There! I'm an infrastructure as a code tool</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Structurechangeidmodal -->
+    <div id="modalform" class="modal modal-fixed-footer">
+      <div class="row modal-content">
+        <form class="col s12" action="/submit" method="post">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="First Name" id="fname" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Last Name" id="lname" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Mobile No." id="mobile" type="number" class="validate">
+              <label for="mobile">Mobile No.</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Email" id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 center-align">
+              <a class="waves-effect waves-light btn" id="submitForm">submit</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.materialboxed').materialbox();
+      $('#submitForm').click(() => {
+          submitForm();
+      })
+      $('.modal').modal();
+  });
+  const submitForm = () => {
+    let formData = {
+        first_name : document.getElementById("fname").value,
+        last_name : document.getElementById("lname").value,
+        mobile_no : document.getElementById("mobile").value,
+        email : document.getElementById("email").value
+
+    };
+    socket.emit('formData', formData);
+     const socket = io();
+     socket.on('formDataResponse', (data) => {
+       console.log("Data Submitted", data);
+     });
+    fetch('/submit',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Data Submitted", data);
+    })
+    .catch(error =>{
+        console.error("Error in submitting form Data:", error);
+    });
+    console.log("Form Data: ", formData);
+};
+  </script>
+  <!-- <script  type="application/json"   src="../script.js"></script> -->
+</body>
+
+</html>

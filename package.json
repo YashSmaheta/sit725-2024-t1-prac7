@@ -1,0 +1,16 @@
+{
+  "name": "sit725-2024-t1-prac7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.5.0",
+    "socketio": "^1.0.0"
+  }
+}
