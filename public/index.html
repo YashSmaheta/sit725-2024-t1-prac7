@@ -158,10 +158,14 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="application/json" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
   <!-- Compiled and minified JavaScript -->
-  <script src="/socket.io/socket.io.js"></script>
+  <script type="application/json" src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <!-- <script type="application/json"  src="/socket.io/socket.io.js"></script> -->
+  <!-- <script src="../node_modules/socket.io/client-dist/socket.io.js" type="application/json"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
+  <script type="module">
     $(document).ready(function () {
       $('.materialboxed').materialbox();
       $('#submitForm').click(() => {
@@ -169,6 +173,19 @@
       })
       $('.modal').modal();
   });
+  let socket = io();
+      socket.on('connect', () => {
+          console.log('User connected');
+      });
+      socket.on('disconnect', () => {
+          console.log('User disconnected');
+      });
+    socket.on('number', (msg) => {
+        console.log('Random number: ' + msg);
+        })
+        
+
+
   const submitForm = () => {
     let formData = {
         first_name : document.getElementById("fname").value,
@@ -177,29 +194,8 @@
         email : document.getElementById("email").value
 
     };
-    socket.emit('formData', formData);
-     const socket = io();
-     socket.on('formDataResponse', (data) => {
-       console.log("Data Submitted", data);
-     });
-    fetch('/submit',{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Data Submitted", data);
-    })
-    .catch(error =>{
-        console.error("Error in submitting form Data:", error);
-    });
-    console.log("Form Data: ", formData);
 };
   </script>
-  <!-- <script  type="application/json"   src="../script.js"></script> -->
 </body>
 
 </html>

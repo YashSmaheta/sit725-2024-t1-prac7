@@ -34,6 +34,9 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('Client disconnected');
     });
+    setInterval(()=>{
+        socket.emit('number', parseInt(Math.random()*10));
+        }, 1000)
 });
 
 // app.post('/submit', async (req, res) => {
